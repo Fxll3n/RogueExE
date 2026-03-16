@@ -13,15 +13,8 @@ func _on_command_entered() -> void:
 	
 	var command: String = text.split("\n")[0]
 	
-	parse_command(command)
+	CommandManager.parse_command(command)
 	command_line.clear()
 
-func parse_command(command_string: String) -> void:
-	var split_command = command_string.split(" ")
-	var command: String = split_command[0]
-	split_command.remove_at(0)
-	var arguments: PackedStringArray = split_command
-	
-	print("Commands: \t%s" % command)
-	print("Arguments: \t%s" % arguments)
+
 	
