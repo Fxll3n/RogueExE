@@ -18,8 +18,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 LimboConsole="*uid://dyxornv8vwibg"
-CommandManager="*uid://dv1xiasguu02s"
-CurrencyManager="*uid://d3belj7was8x6"
+CommandParser="*uid://drbmqctk7dt6d"
+GameState="*uid://bla4h8sc7s2k0"
+JobManager="*uid://dre3ec2t8cbf6"
+
+[display]
+
+window/size/mode=3
 
 [editor_plugins]
 

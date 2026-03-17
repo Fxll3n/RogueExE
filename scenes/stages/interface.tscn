@@ -53,6 +53,9 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_quxy1"]
+font_size = 32
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p00ve"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p00ve"]
@@ -208,18 +211,18 @@ shader_parameter/overlay = true
 shader_parameter/resolution = Vector2(2560, 1920)
 shader_parameter/brightness = 1.4
 shader_parameter/scanlines_opacity = 0.4
-shader_parameter/scanlines_width = 0.25
-shader_parameter/grille_opacity = 0.150000007125
+shader_parameter/scanlines_width = 0.050000002375
+shader_parameter/grille_opacity = 0.10000000475
 shader_parameter/roll = true
 shader_parameter/roll_speed = 1.0
 shader_parameter/roll_size = 50.000002375
 shader_parameter/roll_variation = 1.80000008224012
 shader_parameter/distort_intensity = 0.002000000095
 shader_parameter/aberration = -0.01399995316500002
-shader_parameter/noise_opacity = 0.1470000069825
+shader_parameter/noise_opacity = 0.10000000475
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.06
-shader_parameter/pixelate = true
+shader_parameter/pixelate = false
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 0.150000007125
 shader_parameter/clip_warp = false
@@ -248,10 +251,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_quxy1")
 
 [node name="MarginContainer" type="MarginContainer" parent="Interface/PanelContainer" unique_id=1732949148]
 layout_mode = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Interface/PanelContainer/MarginContainer" unique_id=785256938]
 layout_mode = 2
@@ -261,7 +264,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_6oum8")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ingsp")
-text = "Logged in as Fxll3n"
+label_settings = SubResource("LabelSettings_quxy1")
 
 [node name="HSeparator2" type="HSeparator" parent="Interface/PanelContainer/MarginContainer/VBoxContainer" unique_id=2086805109]
 layout_mode = 2
@@ -276,14 +279,15 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_p00ve")
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_qyhyj")
 theme_override_styles/background = SubResource("StyleBoxFlat_u0btp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_l44i6")
 bbcode_enabled = true
-text = "[b][color=green]Fxll3n/sys/ $[/color][/b]  hack [color=blue][u]google.com[/u][/color] [color=red]with[/color] [color=cyan]shutdown.py[/color]
-Connecting to [color=blue][u]google.com[/u][/color] . . .
-[color=green]Connection established.[/color]
-Opening Hacking Interface . . ."
 scroll_following = true
 
 [node name="HSeparator" type="HSeparator" parent="Interface/PanelContainer/MarginContainer/VBoxContainer" unique_id=660629798]
@@ -292,10 +296,11 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_p00ve")
 
 [node name="CommandLine" type="TextEdit" parent="Interface/PanelContainer/MarginContainer/VBoxContainer" unique_id=537336943]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/caret_width = 8
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_shusf")
 theme_override_styles/focus = SubResource("StyleBoxFlat_e14bw")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_t283q")
@@ -311,7 +316,10 @@ caret_blink = true
 
 [node name="ColorRect" type="ColorRect" parent="Interface" unique_id=2026001734]
 material = SubResource("ShaderMaterial_qyhyj")
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
